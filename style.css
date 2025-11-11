@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/*Começar pelo geralzão*/
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+button,.botao{
+    background-color: blue;
+    padding: 15px 30px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+}
+button a,.botao{
+    color: white;
+    font-size: 16px;
+   
+}
+button:hover{
+    background-color: rgb(34, 34, 121);
+}
+.botao:hover{
+    background-color: rgb(34, 34, 121);
+}
+/*Modificar as listas*/
+.value,
+.service-list,
+.client-list {
+    display: flex;
+}
+
+.value li,
+.service-list li,
+.client-list li {
+    padding: 0 10px;
+}
+/*modificar banner principal do header*/
+.banner{
+    
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/mapbox-LJtfV2Dkp4U-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: contrast(1.2) brightness(0.5); /* aumenta o contraste */
+  z-index: -1; /* deixa atrás do conteúdo */
+}
+
+/*Modificar o sobre*/
+.sobre {
+    background-color: rgb(216, 216, 216);
+    padding: 20px 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.top-about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top-about p {
+    width: 800px;
+    text-align: center;
+}
+.top-about h2{
+    
+    font-size: 30px;
+}
+.top-about span{
+    color: blue;
+}
+.value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.card-value {
+    background-color: white;
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+.card-value:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card-value img {
+    width: 60px;
+    margin: 20px 0;
+}
+
+.text-value {
+    width: 200px;
+    margin: 10px;
+}
+
+.text-value h3 {
+    width: 10px;
+}
+.text-value p{
+    color: rgb(136, 136, 136);
+}
+
+/*Modificar o banner 2*/
+.show{
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    
+    
+}
+.show::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/reuniao.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: contrast(1.2) brightness(0.7); /* aumenta o contraste */
+  z-index: -1; /* deixa atrás do conteúdo */
+}
+.show p{
+    width: 500px;
+    
+}
+.show h1{
+    width: 400px;
+}
+/*Modificar os serviços*/
+.service-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px 50px;
+}
+.card-service{
+    background-color: rgb(228, 228, 228);
+    width: 330px;
+    padding: 0 20px 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 3px 2px rgba(0,0,0,0.2);
+}
+.image-service{
+    display: flex;
+    justify-content: center;
+}
+.image-service img{
+    width: 330px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+
+}
+/*modificar localização*/
+.show-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(46, 81, 164);
+    
+}
+
+.form-box{
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 2px rgba(0,0,0,0.2);
+    text-align: center;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+.infos{
+    margin: 50px;
+    color: white;
+}
+input,textarea{
+    border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+    background-color:  rgb(228, 228, 228);
+    
+    
+}
+.form-box h2{
+    color: blue;
+}
+/*modificar footer*/
+footer{
+    background-color: rgb(216, 216, 216);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.rodape-father-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+    margin: 20px;
+    
+}
+.pe{
+    text-align: center;
+}
+.child-list li a{
+    color: rgb(102, 102, 102);
+}
+.child-list li a:hover{
+    color: rgb(70, 70, 70);
+    font-weight: 500;
+}
+/*modificar clientes*/
+.client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+/*modificar navbar*/
+.topo img{
+    width: 200px;
+}
+.big-nav{
+    background-color: #1800ad;
+    position: fixed; /* fixa no topo */
+      top: 0;
+      left: 0;
+      width: 100%;
+      
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 0;
+      z-index: 1000; /* garante que fique por cima */
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    padding: 0 20px;
+}
+.navbar li a{
+    color: white;
+    
+}
+.navbar li a:hover{
+    
+    color: rgb(126, 126, 249);
+}
